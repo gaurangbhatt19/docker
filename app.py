@@ -9,7 +9,7 @@ redis=Redis(host="redis",port=6379)
 def flaskapp():
     # key log in redis
     redis.incr("log")
-    return 'Flask log: %s' % redis.get("log")
+    return 'Flask log: %s' % redis.get("log").decode("utf-8")
 
 if __name__=="__main__":
     app.run(host="0.0.0.0",port=3333,debug=True)
