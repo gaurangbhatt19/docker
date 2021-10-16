@@ -3,7 +3,7 @@ from redis import Redis
 
 
 app=Flask(__name__)
-redis=Redis(host="localhost",port=6379)
+redis=Redis(host="redis",port=6379)
 
 @app.route("/")
 def flaskapp():
