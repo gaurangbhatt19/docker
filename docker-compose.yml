@@ -1,0 +1,12 @@
+version: "3"
+#all containers
+services:
+# container_name
+  docker_compose_app: 
+  # dockerfile
+    build: .
+    ports:
+    - "3030:3030"
+    volumes:
+    - .:/code
+  
